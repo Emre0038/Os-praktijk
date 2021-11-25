@@ -1,3 +1,10 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    cout<<"hello world";
+-------------------------------------------------------------------------
+
 #include <stdio.h>
 void print_function( char letter );
 int ctr;
