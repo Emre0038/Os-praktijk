@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float temp;
+
+    printf("the meaning for 'Welkom' (0 = Hallo, 1 = Doei, 2 = Ga weg)\n");
+    scanf("%f", &temp);
+    if(temp == 0){
+    system("test.exe");
+    }
+    else if(temp == 1){
+        printf(" Doei\n");
+    }else if(temp == 2){
+        printf(" Kom hier\n");
+    }else if(temp < 0){
+        printf("Hier klopt iets niet, doe is opnieuw\n");
+        return 0;
+    }else{
+        printf("Verkeerd!\n");
+    }
+
+
+    return (0);
+}
