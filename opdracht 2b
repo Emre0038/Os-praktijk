@@ -1,17 +1,17 @@
 #include<stdio.h>  
   
-void diam(float, float*, float*);  
+void omtrek(float, float*, float*);  
   
 int main()  
 {  
-    float diameter, circumference;  
+    float diameter, cirkelomtrek;  
   
-    printf("Enter radius of Circle in (cm):\n");  
+    printf("diameter van cirkel in (cm):\n");  
     scanf("%f", &diameter);  
   
-    diam(diameter, &circumference);  
+    diam(diameter, &cirkelomtrek);  
   
-    printf("omtrek van cirkel = %0.2f\n", circumference);  
+    printf("omtrek van cirkel = %0.2f\n", cirkelomtrek);  
   
     return 0;  
 }  
