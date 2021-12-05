@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int max;
+int number; int ctr;
+int maxArrays(float *array1pointer, float *array2pointer, float *array3pointer);
+
+int main()
+{
+    
+    float array1[4]; float array2[4]; float array3[4]; float *ainput; float *array2input; float *array3input;
+
+    array1[0] = 0.7; array1[1] = 3.3; array1[2] = 0.5; array1[3] = 10.3; array2[0] = 4.1; array2[1] = 1.5; array2[2] = 0.5; array2[3] = 2.3;
+
+
+    ainput = &array1[0]; array2input = &array2[0]; array3input = &array3[0];
+
+    
+    printf("Array 1 and 2:\n");
+    printf("Start Programma\n");
+
+    for (number = 0; number < 4; number++)
+    {
+        printf("%g %g\n", array1[number], array2[number]);
+    }
+    printf("\nArray 3:\n");
+
+
+
+    maxArrays(ainput, array2input, array3input);
+
+    for (number = 0; number < 4; number++)
+    {
+        printf("%g\n", array3[number]);
+    }
+    return 0;
+}
+
+
+int maxArrays(float *array1pointer, float *array2pointer, float *array3pointer)
+{
+    for (ctr = 0; ctr < 4; ctr++)
+{
+        if (array1pointer[ctr] > array2pointer[ctr])
+{
+            array3pointer[ctr] = array1pointer[ctr];
+}
+        else
+        {
+            array3pointer[ctr] = array2pointer[ctr];
+}
+}
+}
+
