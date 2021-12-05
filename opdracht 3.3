@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    int input;
+    struct main
+    {
+    char name[10];
+    int leeftijd;
+    struct opleiding
+    {
+    char name[10];
+    int instroomjaar;
+    } opleiding;
+        
+
+    };
+    struct main sentence[10];
+    for (input = 0; input < 10; input++)
+    
+    
+
+    {
+        printf("Wat is jouw naam?");
+        scanf("%s", sentence[input].name);
+
+        printf("Wat is jouw opleiding?");
+        scanf("%s", sentence[input].opleiding);
+
+        printf("Wat is jouw instroomjaar?");
+        scanf("%d", &sentence[input].opleiding.instroomjaar);
+
+        printf("Wat is jouw leeftijd?");
+        scanf("%d", &sentence[input].leeftijd);
+
+        printf("\n");
+    }
+
+    for (input = 0; input < 10; input++)
+    {
+        printf("%f\n%d\n%s\n%f\n\n", 
+
+        sentence[input].name, 
+        sentence[input].opleiding, 
+        sentence[input].leeftijd, 
+        sentence[input].opleiding.instroomjaar);
+    }
+
+    return 0;
+}
