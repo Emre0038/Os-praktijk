@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+
+
+char abc(FILE *folder);
+int main(void)
+{
+    FILE *folder;
+    folder = fopen("text.txt","r"); //for read//
+    if (folder == 0)
+    {
+    printf("probeer het opnieuw alstublieft!");
+    printf("Dit kan ik niet openen!");
+    return 0;
+    }
+    abc(folder);
+
+    fclose(folder);
+    return 0;
+}
+
+char abc(FILE *folder)
+{
+    char ch;
+    int teller = 0;
+    FILE *input;
+    input = fopen("nieuw.txt", "w"); 
+    while ((ch = fgetc(folder)) != EOF) 
+    {
+    teller++;
+    fputc(ch, input);
+
+    }
+    fclose(input);
+    printf("Er bevinden zich  %d letters in dit bestand" , teller);
+
+}
