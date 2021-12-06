@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(void)
+{
+
+    struct main
+    {
+        char name[10];
+        int leeftijd;
+    };
+
+    struct main *pnt = (struct main*)
+    malloc(sizeof(struct main));
+    int cont = 1; int con = 1;
+    struct main *new1pnt;
+
+    while (1)
+    {
+    new1pnt = pnt;
+    new1pnt += (con-1);
+
+    printf("Schrijf hier uw naam alstublieft");
+    scanf("%s", new1pnt->name);
+
+    printf("Schrijf hier uw leeftijd op als ik dat mag vragen natuurlijk ;)");
+    scanf("%d", &new1pnt->leeftijd);
+
+    if (cont != 1)
+    {
+    break;
+    }
+    printf("\n");
+
+    struct main *ab = pnt;
+    for (int i = 0; i < con; i++)
+    {
+    printf("%s\n", ab->name);
+    printf("%d\n", ab->leeftijd);
+    ab++;
+    }
+
+    con++;
+
+    pnt = (struct main*)
+    realloc(pnt, con * sizeof(struct main));
+      
+    if (pnt == 0)
+    {
+    return (0);
