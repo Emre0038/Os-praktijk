@@ -4,9 +4,9 @@
 // Change the following if you want to use
 // different GPIO pins for the three LEDs
 
-#define LED1 12 // GPIO 12
-#define LED2 13 // etc.
-#define LED3 15
+#define LED1 5 // GPIO 12
+#define LED2 18 // etc.
+#define LED3 19
 
 struct s_led {
   byte gpio; // LED GPIO number
@@ -74,12 +74,14 @@ void loop() {
   
   if (counter == 10){ 
     printf("Suspending middle LED task.\n");
+    vTaskSuspend(leds[0].taskh);
     vTaskSuspend(leds[1].taskh);
+    vTaskSuspend(leds[2].taskh);
     delay(5000);
     printf("Resuming middle LED task.\n");
     vTaskResume(leds[1].taskh);
+    counter == 0;
+  }
 }
-
-
 
 
