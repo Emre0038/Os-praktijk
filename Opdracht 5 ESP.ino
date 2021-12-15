@@ -79,7 +79,9 @@ void loop() {
     vTaskSuspend(leds[2].taskh);
     delay(5000);
     printf("Resuming middle LED task.\n");
+    vTaskResume(leds[0].taskh);
     vTaskResume(leds[1].taskh);
+    vTaskResume(leds[2].taskh);
     counter == 0;
   }
 }
